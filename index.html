@@ -1254,51 +1254,37 @@ body::before{
 </div>
 
 <script>
-/* ============ CS:GO SKINS — встроенные визуалы ============ */
-const ITEMS = [
-  // Consumer
-  {n:'P250 | Sand Dune',       e:'🔫', wpn:'pistol', r:'consumer',   p:20},
-  {n:'MP9 | Storm',            e:'🔫', wpn:'smg',    r:'consumer',   p:30},
-  {n:'SG 553 | Waves',         e:'🔫', wpn:'rifle',  r:'consumer',   p:40},
-  {n:'MAG-7 | Storm',          e:'🔫', wpn:'shotgun',r:'consumer',   p:50},
-  {n:'Galil AR | Cerberus',    e:'🔫', wpn:'rifle',  r:'consumer',   p:60},
-  {n:'PP-Bizon | Osiris',      e:'🔫', wpn:'smg',    r:'consumer',   p:80},
-  // Industrial
-  {n:'AK-47 | Redline',        e:'🔥', wpn:'rifle',  r:'industrial', p:120},
-  {n:'M4A1-S | Guardian',      e:'🛡️', wpn:'rifle',  r:'industrial', p:160},
-  {n:'AWP | Worm God',         e:'🎯', wpn:'sniper', r:'industrial', p:200},
-  {n:'USP-S | Torque',         e:'🔫', wpn:'pistol', r:'industrial', p:250},
-  {n:'Glock-18 | Water',       e:'💧', wpn:'pistol', r:'industrial', p:300},
-  {n:'Desert Eagle | Conspiracy', e:'🦅', wpn:'pistol', r:'industrial', p:400},
-  // Mil-Spec
-  {n:'AK-47 | Bloodsport',     e:'🩸', wpn:'rifle',  r:'milspec',    p:600},
-  {n:'M4A4 | Desolate Space',  e:'🌌', wpn:'rifle',  r:'milspec',    p:800},
-  {n:'AWP | Neo-Noir',         e:'🖤', wpn:'sniper', r:'milspec',    p:1100},
-  {n:'USP-S | Kill Confirmed', e:'💀', wpn:'pistol', r:'milspec',    p:1400},
-  {n:'Deagle | Printstream',   e:'🖨️', wpn:'pistol', r:'milspec',    p:1800},
-  {n:'M4A1-S | Printstream',   e:'🖨️', wpn:'rifle',  r:'milspec',    p:2400},
-  // Restricted
-  {n:'AK-47 | Vulcan',         e:'🌋', wpn:'rifle',  r:'restricted', p:4000},
-  {n:'AWP | Hyper Beast',      e:'👹', wpn:'sniper', r:'restricted', p:5500},
-  {n:'M4A1-S | Hyper Beast',   e:'👹', wpn:'rifle',  r:'restricted', p:7000},
-  {n:'AWP | Asiimov',          e:'⚪', wpn:'sniper', r:'restricted', p:9000},
-  {n:'AK-47 | Asiimov',        e:'⚪', wpn:'rifle',  r:'restricted', p:11000},
-  {n:'Deagle | Blaze',         e:'🔥', wpn:'pistol', r:'restricted', p:14000},
-  // Classified
-  {n:'AK-47 | Fire Serpent',   e:'🐍', wpn:'rifle',  r:'classified', p:22000},
-  {n:'M4A4 | Howl',            e:'🐺', wpn:'rifle',  r:'classified', p:28000},
-  {n:'Karambit | Fade',        e:'🔪', wpn:'knife',  r:'classified', p:35000},
-  {n:'Butterfly | Fade',       e:'🦋', wpn:'knife',  r:'classified', p:45000},
-  {n:'AWP | Dragon Lore',      e:'🐲', wpn:'sniper', r:'classified', p:60000},
-  {n:'Bayonet | Doppler',      e:'💠', wpn:'knife',  r:'classified', p:80000},
-  // Covert
-  {n:'M9 | Crimson Web',       e:'🕷️', wpn:'knife',  r:'covert',     p:150000},
-  {n:'Karambit | Doppler Ruby',e:'💎', wpn:'knife',  r:'covert',     p:220000},
-  {n:'AWP | Dragon Lore ✦',    e:'🐉', wpn:'sniper', r:'covert',     p:320000},
-  {n:'Karambit | Case Hardened',e:'💙', wpn:'knife', r:'covert',     p:500000},
-  {n:'Bayonet | Night',        e:'🌑', wpn:'knife',  r:'covert',     p:750000},
-  {n:'M4A4 | Howl StatTrak',   e:'🔥', wpn:'rifle',  r:'covert',     p:1200000}
-];
+/* ============ CS:GO SKINS — локальные данные ============ */
+let itemsData = [];
+
+async function loadSkins() {
+  try {
+    const response = await fetch('skins/skins.json');
+    if (!response.ok) throw new Error('Не удалось загрузить skins.json');
+    const data = await response.json();
+    
+    // Преобразуем объект в массив, который ожидает сайт
+    itemsData = Object.keys(data).map(name => ({
+      uid: name.toLowerCase().replace(/[^a-z0-9]+/g, '_'), // простой uid
+      n: name,
+      e: '🔫', // запасной эмодзи, если картинка не загрузится
+      img: data[name].image,
+      r: data[name].rarity,
+      p: 0 // Цена будет установлена позже
+    }));
+    console.log('Скины успешно загружены:', itemsData.length);
+  } catch (error) {
+    console.error('Ошибка загрузки скинов:', error);
+    alert('Не удалось загрузить скины. Проверь консоль.');
+  }
+}
+
+// Запускаем загрузку при старте
+loadSkins();
+
+// Остальной код (rollItem, renderInv и т.д.) можно оставить, 
+// но нужно будет заменить ITEMS на itemsData в нужных местах.
+// Например, в функции rollItem: const pool = itemsData.filter(...)
 
 const RARITY = {
   consumer:   {name:'Армейский',     color:'#b0c3d9'},
