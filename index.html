@@ -17,7 +17,6 @@
   --text:#e8ecf4;--text2:#8b95b0;--text3:#5a6480;
   --accent:#00d4ff;--accent2:#7c3aed;--accent3:#f59e0b;
   --green:#10b981;--red:#ef4444;--gold:#fbbf24;
-  /* CS:GO rarity colors */
   --r-consumer:#b0c3d9;--r-industrial:#5e98d9;--r-milspec:#4b69ff;
   --r-restricted:#8847ff;--r-classified:#d32ce6;--r-covert:#eb4b4b;--r-gold:#ffd700;
 }
@@ -44,7 +43,6 @@ body::before{
 
 .app{max-width:640px;margin:0 auto;padding:0 16px}
 
-/* ============ TOPBAR ============ */
 .topbar{
   position:sticky;top:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;gap:10px;
@@ -105,7 +103,6 @@ body::before{
 }
 .icon-btn:active{transform:scale(.92);background:var(--surface2)}
 
-/* ============ HERO BANNER ============ */
 .hero{
   position:relative;border-radius:20px;overflow:hidden;
   height:160px;margin-bottom:16px;
@@ -152,7 +149,6 @@ body::before{
 }
 .hero-dots span.active{background:#fff;width:36px}
 
-/* ============ STATS ROW ============ */
 .stats-row{display:flex;gap:8px;margin-bottom:16px}
 .stat-pill{
   flex:1;display:flex;align-items:center;gap:7px;
@@ -171,7 +167,6 @@ body::before{
 .stat-pill b{color:var(--green);font-weight:900;font-size:13px}
 .stat-pill .s-lbl{color:var(--text3);font-weight:700;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;text-transform:uppercase;letter-spacing:.3px}
 
-/* ============ LIVE FEED ============ */
 .live-feed{
   position:relative;overflow:hidden;border-radius:14px;
   background:linear-gradient(90deg,rgba(0,212,255,.06),rgba(124,58,237,.06),rgba(16,185,129,.06));
@@ -191,7 +186,6 @@ body::before{
 .feed-item i{font-style:normal;font-weight:900;color:var(--gold)}
 @keyframes feedIn{from{transform:translateY(22px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-/* ============ NAV TABS ============ */
 .nav-tabs{
   display:flex;gap:6px;margin-bottom:20px;
   overflow-x:auto;padding-bottom:8px;scrollbar-width:none;
@@ -227,7 +221,6 @@ body::before{
 }
 .pane-head p{font-size:13px;color:var(--text2);font-weight:600}
 
-/* ============ CASE CARDS — CS:GO STYLE ============ */
 .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .case-card{
   position:relative;border-radius:16px;overflow:hidden;
@@ -298,7 +291,6 @@ body::before{
 .case-badge.new{background:linear-gradient(135deg,#10b981,#059669);color:#fff}
 .case-badge.rare{background:linear-gradient(135deg,#7c3aed,#4c1d95);color:#fff}
 
-/* ============ GAMES ============ */
 .games-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .game-card{
   border-radius:16px;padding:18px 14px;text-align:center;cursor:pointer;
@@ -322,7 +314,6 @@ body::before{
 .game-card .gc-name{font-weight:900;font-size:13px;position:relative;color:#fff}
 .game-card .gc-sub{font-size:11px;color:var(--text3);font-weight:700;margin-top:3px;position:relative}
 
-/* ============ INVENTORY ============ */
 .inv-header{
   display:flex;justify-content:space-between;align-items:center;gap:10px;
   background:var(--surface);border:1px solid var(--border);border-radius:16px;
@@ -369,7 +360,6 @@ body::before{
 .empty-state{text-align:center;padding:60px 20px;color:var(--text3);font-weight:700}
 .empty-state .es-big{font-size:56px;display:block;margin-bottom:14px;opacity:.5}
 
-/* ============ MODAL ============ */
 .modal-overlay{
   position:fixed;inset:0;z-index:200;display:none;
   background:rgba(3,5,12,.92);backdrop-filter:blur(12px);
@@ -404,7 +394,6 @@ body::before{
 }
 .btn-close:active{transform:scale(.9);background:var(--surface2)}
 
-/* ============ REEL ============ */
 .reel-viewport{
   position:relative;overflow:hidden;border-radius:14px;
   background:rgba(5,8,16,.8);border:1px solid var(--border);
@@ -443,7 +432,6 @@ body::before{
   padding:0 4px;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;
 }
 
-/* rarity colors */
 .rar-consumer{--tile-color:var(--r-consumer)}
 .rar-industrial{--tile-color:var(--r-industrial)}
 .rar-milspec{--tile-color:var(--r-milspec)}
@@ -452,7 +440,6 @@ body::before{
 .rar-covert{--tile-color:var(--r-covert)}
 .rar-gold{--tile-color:var(--r-gold)}
 
-/* ============ MULTI SELECTOR ============ */
 .multi-row{display:flex;gap:8px;margin-bottom:14px}
 .multi-btn{
   flex:1;padding:11px 4px;border-radius:12px;border:1px solid var(--border);
@@ -482,7 +469,6 @@ body::before{
 .mr-card .mr-name{font-size:9px;font-weight:900;color:#fff;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 2px}
 .mr-card .mr-price{font-size:10px;font-weight:900;color:var(--green);margin-top:4px}
 
-/* ============ DROP LIST ============ */
 .drop-list{
   max-height:220px;overflow-y:auto;margin-top:14px;
   background:rgba(5,8,16,.6);border:1px solid var(--border);
@@ -499,7 +485,6 @@ body::before{
 .drop-row .dr-chance{font-size:10px;font-weight:900;min-width:46px;text-align:right}
 .drop-row .dr-price{font-size:10px;color:var(--green);font-weight:900;min-width:58px;text-align:right}
 
-/* ============ RESULT ============ */
 .result-card{
   display:none;text-align:center;padding:20px 14px;border-radius:16px;
   background:rgba(5,8,16,.6);border:1px dashed var(--border2);margin-bottom:14px;
@@ -513,7 +498,6 @@ body::before{
 .result-card .rc-rar{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
 .result-card .rc-price{font-size:16px;font-weight:900;color:var(--green)}
 
-/* ============ BUTTONS ============ */
 .btn-main{
   width:100%;padding:16px;border-radius:14px;border:none;cursor:pointer;
   font-family:inherit;font-weight:900;font-size:15px;color:#fff;
@@ -530,7 +514,6 @@ body::before{
 .btn-main:disabled{opacity:.5;box-shadow:none;cursor:not-allowed}
 .btn-main.green{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 12px 32px rgba(16,185,129,.35)}
 
-/* ============ GAME UI ============ */
 .game-desc{
   font-size:13px;color:var(--text2);font-weight:700;text-align:center;
   margin-bottom:16px;line-height:1.5;
@@ -552,7 +535,6 @@ body::before{
 .game-status.win{color:var(--green)}
 .game-status.lose{color:var(--red)}
 
-/* cells */
 .cells-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
 .cell-btn{
   aspect-ratio:1;border-radius:14px;border:1px solid var(--border);
@@ -563,7 +545,6 @@ body::before{
 .cell-btn.win{background:linear-gradient(180deg,#10b981,#059669);border-color:var(--green)}
 .cell-btn.lose{background:linear-gradient(180deg,#3a1520,#1f0a10);border-color:var(--red);opacity:.6}
 
-/* crash */
 .crash-view{
   position:relative;height:160px;border-radius:16px;overflow:hidden;
   background:radial-gradient(circle at 50% 130%,rgba(0,212,255,.15),transparent 60%),rgba(5,8,16,.7);
@@ -576,7 +557,6 @@ body::before{
 .crash-progress{position:absolute;left:0;bottom:0;height:5px;width:100%;background:rgba(255,255,255,.05)}
 .crash-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--accent),var(--accent2));transition:width .1s}
 
-/* mines */
 .mines-field{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-bottom:16px}
 .mine-btn{
   aspect-ratio:1;border-radius:10px;border:1px solid var(--border);
@@ -603,7 +583,6 @@ body::before{
 .mine-count-btn.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
 .mine-count-btn:active{transform:scale(.93)}
 
-/* roulette */
 .roulette-stage{position:relative;width:240px;height:240px;margin:0 auto 20px}
 .roulette-pointer{
   position:absolute;top:-8px;left:50%;transform:translateX(-50%);z-index:10;
@@ -627,7 +606,6 @@ body::before{
   font-size:26px;z-index:6;box-shadow:0 0 28px rgba(0,212,255,.5);
 }
 
-/* dice */
 .dice-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
 .dice-choice{
   padding:14px 8px;border-radius:12px;border:1px solid var(--border);
@@ -646,7 +624,6 @@ body::before{
 .die-face.rolling{animation:diceRoll .15s infinite}
 @keyframes diceRoll{0%,100%{transform:rotate(-8deg) scale(1)}50%{transform:rotate(8deg) scale(.94)}}
 
-/* slots */
 .slot-machine{display:flex;gap:10px;justify-content:center;padding:20px 10px;background:rgba(5,8,16,.5);border-radius:16px;border:1px solid var(--border);margin-bottom:16px}
 .slot-reel{
   width:82px;height:100px;border-radius:14px;background:var(--surface);
@@ -657,9 +634,6 @@ body::before{
 @keyframes slotSpin{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .slot-reel.win{border-color:var(--green);box-shadow:0 0 26px rgba(16,185,129,.7)}
 
-/* ================================================================
-   UPGRADE — ПОЛНОСТЬЮ НОВЫЙ
-   ================================================================ */
 .forge-area{
   position:relative;border-radius:20px;overflow:hidden;
   background:
@@ -687,7 +661,6 @@ body::before{
   100%{transform:translate(-25px,-60px);opacity:0}
 }
 
-/* Chance arc visualization */
 .chance-arc{
   position:relative;width:260px;height:260px;margin-bottom:16px;
 }
@@ -717,7 +690,6 @@ body::before{
 .arc-empty{font-size:11px;color:var(--text3);font-weight:800;text-align:center;padding:0 16px;line-height:1.5}
 .arc-empty .ae-big{font-size:38px;display:block;margin-bottom:6px;opacity:.5}
 
-/* Chance badge */
 .chance-badge{
   position:absolute;top:8px;left:50%;transform:translateX(-50%);
   padding:6px 18px;border-radius:20px;
@@ -730,7 +702,6 @@ body::before{
   white-space:nowrap;
 }
 
-/* Target marker on arc */
 .target-marker{
   position:absolute;
   width:20px;height:20px;
@@ -742,7 +713,6 @@ body::before{
   pointer-events:none;
 }
 
-/* Forge selection grid */
 .forge-select-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
   max-height:190px;overflow-y:auto;padding:8px;
@@ -768,7 +738,6 @@ body::before{
 .forge-sel-name{font-size:9px;font-weight:900;color:#fff;line-height:1.1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 2px}
 .forge-sel-price{font-size:9.5px;font-weight:900;color:var(--green);margin-top:3px}
 
-/* Slider */
 .slider-box{
   background:rgba(5,8,16,.5);border:1px solid var(--border);
   border-radius:14px;padding:16px;margin-bottom:14px;
@@ -818,7 +787,6 @@ body::before{
 }
 .forge-result-info b{color:var(--green)}
 
-/* Forge animations */
 .forge-area.forging .chance-arc{animation:forgeShake .12s infinite}
 @keyframes forgeShake{0%,100%{transform:translateX(0)}50%{transform:translateX(2px)}}
 .forge-flash-win{
@@ -834,7 +802,6 @@ body::before{
 }
 @keyframes flashRed{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
 
-/* ============ BATTLES ============ */
 .lb-panel{
   background:var(--surface);border:1px solid var(--border);border-radius:18px;
   padding:16px;margin-bottom:16px;
@@ -901,7 +868,6 @@ body::before{
 .battle-outcome-box .bo-text{font-size:14px;font-weight:800}
 .battle-outcome-box .bo-text b{color:var(--green)}
 
-/* ============ SHOP ============ */
 .shop-list{display:grid;gap:14px}
 .shop-task{
   border-radius:18px;padding:18px;border:1px solid var(--border);
@@ -930,7 +896,6 @@ body::before{
 .shop-task.shake{animation:shakeIt .4s}
 .shop-timer{text-align:center;font-size:12px;color:var(--text3);font-weight:800;margin-top:10px}
 
-/* ============ PROFILE ============ */
 .profile-hero{
   position:relative;border-radius:20px;padding:22px;
   background:linear-gradient(135deg,rgba(0,212,255,.12),rgba(124,58,237,.12),rgba(16,185,129,.08));
@@ -1026,7 +991,6 @@ body::before{
 .achievement-card .ac-name{font-size:9px;font-weight:900;color:var(--text3);line-height:1.2}
 .achievement-card.done .ac-name{color:var(--green)}
 
-/* ============ ADMIN / WITHDRAW ============ */
 .admin-body{padding:4px 0;position:relative;z-index:2}
 .admin-balance{
   text-align:center;font-size:16px;font-weight:800;margin-bottom:16px;
@@ -1059,7 +1023,6 @@ body::before{
   padding:12px;background:rgba(0,0,0,.2);border-radius:12px;margin-bottom:14px;
 }
 
-/* ============ TOAST ============ */
 .toast{
   position:fixed;left:50%;bottom:30px;transform:translate(-50%,24px);
   background:linear-gradient(135deg,#111827,#0a0e1a);
@@ -1072,7 +1035,6 @@ body::before{
 .toast.ok{border-color:var(--green);color:#b6ffd6}
 .toast.err{border-color:var(--red);color:#ffc4c4}
 
-/* ============ PARTICLES ============ */
 .fx-particle{
   position:fixed;width:6px;height:6px;border-radius:50%;
   pointer-events:none;z-index:9999;
@@ -1102,7 +1064,6 @@ body::before{
 <body>
 
 <div class="app">
-  <!-- TOPBAR -->
   <header class="topbar">
     <div class="logo">
       <div class="logo-mark">◈</div>
@@ -1118,7 +1079,6 @@ body::before{
     </div>
   </header>
 
-  <!-- HERO BANNER -->
   <div class="hero" id="heroBanner">
     <div class="hero-slide active" style="--h1:#0ea5e9;--h2:#6366f1">
       <span class="hero-tag">Добро пожаловать</span>
@@ -1152,19 +1112,16 @@ body::before{
     </div>
   </div>
 
-  <!-- STATS -->
   <div class="stats-row">
     <div class="stat-pill"><span class="stat-dot"></span><span class="s-lbl">Онлайн</span><b id="onlineCount">1247</b></div>
     <div class="stat-pill"><span class="stat-dot cyan"></span><span class="s-lbl">Открыто</span><b id="totalOpened">0</b></div>
     <div class="stat-pill"><span class="stat-dot purple"></span><span class="s-lbl">Батлы</span><b id="totalBattles">0</b></div>
   </div>
 
-  <!-- FEED -->
   <div class="live-feed">
     <div class="feed-track" id="feedTrack"><div class="feed-item">Загрузка...</div></div>
   </div>
 
-  <!-- TABS -->
   <nav class="nav-tabs" id="navTabs">
     <button class="nav-tab active" data-tab="cases"><span class="nt-ico">📦</span>Кейсы</button>
     <button class="nav-tab" data-tab="games"><span class="nt-ico">🎮</span>Игры</button>
@@ -1215,7 +1172,6 @@ body::before{
   </main>
 </div>
 
-<!-- CASE MODAL -->
 <div class="modal-overlay" id="caseModal">
   <div class="modal-panel">
     <div class="modal-header">
@@ -1239,7 +1195,6 @@ body::before{
   </div>
 </div>
 
-<!-- GAME MODAL -->
 <div class="modal-overlay" id="gameModal">
   <div class="modal-panel">
     <div class="modal-header">
@@ -1250,7 +1205,6 @@ body::before{
   </div>
 </div>
 
-<!-- ADMIN MODAL -->
 <div class="modal-overlay" id="adminModal">
   <div class="modal-panel">
     <div class="modal-header">
@@ -1272,7 +1226,6 @@ body::before{
   </div>
 </div>
 
-<!-- WITHDRAW MODAL -->
 <div class="modal-overlay" id="withdrawModal">
   <div class="modal-panel">
     <div class="modal-header">
@@ -1301,50 +1254,42 @@ body::before{
 </div>
 
 <script>
-/* ============================================================
-   CS:GO SKIN DATABASE
-   ============================================================ */
+/* ============ CS:GO SKINS — через jsDelivr CDN ============ */
 function skinURL(path){
-  return 'https://raw.githubusercontent.com/ByMykel/counter-strike-image-tracker/main/static/panorama/images/econ/default_generated/' + path + '_light_large.png';
+  return 'https://cdn.jsdelivr.net/gh/ByMykel/counter-strike-image-tracker@main/static/panorama/images/econ/default_generated/' + path + '_light_large.png';
 }
 
 const ITEMS = [
-  // Consumer (White) — common
   {n:'P250 | Sand Dune',       e:'🔫', img: skinURL('weapon_p250_cu_p250_sand_dune'),            r:'consumer',   p:20},
   {n:'MP9 | Storm',            e:'🔫', img: skinURL('weapon_mp9_cu_mp9_storm'),                   r:'consumer',   p:30},
   {n:'SG 553 | Waves',         e:'🔫', img: skinURL('weapon_sg556_hy_sg556_waves'),               r:'consumer',   p:40},
   {n:'MAG-7 | Storm',          e:'🔫', img: skinURL('weapon_mag7_hy_mag7_swirl'),                 r:'consumer',   p:50},
   {n:'Galil AR | Cerberus',    e:'🔫', img: skinURL('weapon_galilar_cu_galil_cerberus'),          r:'consumer',   p:60},
   {n:'PP-Bizon | Osiris',      e:'🔫', img: skinURL('weapon_bizon_cu_bizon_osiris'),              r:'consumer',   p:80},
-  // Industrial (Light Blue) — uncommon
   {n:'AK-47 | Redline',        e:'🔥', img: skinURL('weapon_ak47_cu_ak47_redline'),               r:'industrial', p:120},
   {n:'M4A1-S | Guardian',      e:'🛡️', img: skinURL('weapon_m4a1_silencer_am_m4a1s_guardian'),     r:'industrial', p:160},
   {n:'AWP | Worm God',         e:'🐛', img: skinURL('weapon_awp_am_awp_worm_god'),                r:'industrial', p:200},
   {n:'USP-S | Torque',         e:'🔫', img: skinURL('weapon_usp_silencer_cu_usp_torque'),         r:'industrial', p:250},
   {n:'Glock-18 | Water Elemental', e:'💧', img: skinURL('weapon_glock_cu_glock_water'),           r:'industrial', p:300},
   {n:'Desert Eagle | Conspiracy', e:'🎭', img: skinURL('weapon_deagle_am_deagle_conspiracy'),     r:'industrial', p:400},
-  // Mil-Spec (Blue) — rare
   {n:'AK-47 | Bloodsport',     e:'🩸', img: skinURL('weapon_ak47_cu_ak47_bloodsport'),            r:'milspec',    p:600},
   {n:'M4A4 | Desolate Space',  e:'🌌', img: skinURL('weapon_m4a1_cu_m4a1_desolate_space'),        r:'milspec',    p:800},
   {n:'AWP | Neo-Noir',         e:'🖤', img: skinURL('weapon_awp_cu_awp_neo_noir'),                r:'milspec',    p:1100},
   {n:'USP-S | Kill Confirmed', e:'💀', img: skinURL('weapon_usp_silencer_cu_usp_kill_confirmed'), r:'milspec',    p:1400},
   {n:'Desert Eagle | Printstream', e:'🖨️', img: skinURL('weapon_deagle_cu_deagle_printstream'),  r:'milspec',    p:1800},
   {n:'M4A1-S | Printstream',   e:'🖨️', img: skinURL('weapon_m4a1_silencer_cu_m4a1s_printstream'), r:'milspec',    p:2400},
-  // Restricted (Purple) — epic
   {n:'AK-47 | Vulcan',         e:'🌋', img: skinURL('weapon_ak47_cu_ak47_rubber'),                r:'restricted', p:4000},
   {n:'AWP | Hyper Beast',      e:'👹', img: skinURL('weapon_awp_cu_awp_hyper_beast'),             r:'restricted', p:5500},
   {n:'M4A1-S | Hyper Beast',   e:'👹', img: skinURL('weapon_m4a1_silencer_cu_m4a1s_hyper_beast'), r:'restricted', p:7000},
   {n:'AWP | Asiimov',          e:'⚪', img: skinURL('weapon_awp_cu_awp_asimov'),                  r:'restricted', p:9000},
   {n:'AK-47 | Asiimov',        e:'⚪', img: skinURL('weapon_ak47_cu_ak47_asiimov'),               r:'restricted', p:11000},
   {n:'Desert Eagle | Blaze',   e:'🔥', img: skinURL('weapon_deagle_cu_deagle_blaze'),             r:'restricted', p:14000},
-  // Classified (Pink) — legendary
   {n:'AK-47 | Fire Serpent',   e:'🐍', img: skinURL('weapon_ak47_cu_ak47_fire_serpent'),          r:'classified', p:22000},
   {n:'M4A4 | Howl',            e:'🐺', img: skinURL('weapon_m4a1_cu_m4a1_howl'),                  r:'classified', p:28000},
   {n:'Karambit | Fade',        e:'🔪', img: skinURL('weapon_knife_karambit_cu_karambit_fade'),    r:'classified', p:35000},
   {n:'Butterfly | Fade',       e:'🦋', img: skinURL('weapon_knife_butterfly_cu_butterfly_fade'),  r:'classified', p:45000},
   {n:'AWP | Dragon Lore',      e:'🐲', img: skinURL('weapon_awp_am_awp_dragon_lore'),            r:'classified', p:60000},
   {n:'Bayonet | Doppler',      e:'💠', img: skinURL('weapon_knife_bayonet_cu_bayonet_doppler'),   r:'classified', p:80000},
-  // Covert / Gold (Red/Gold) — mythic
   {n:'M9 Bayonet | Crimson Web', e:'🕷️', img: skinURL('weapon_knife_m9_bayonet_cu_m9_bayonet_crimson_web'), r:'covert', p:150000},
   {n:'Karambit | Doppler Ruby', e:'💎', img: skinURL('weapon_knife_karambit_cu_karambit_doppler_phase2'), r:'covert', p:220000},
   {n:'AWP | Dragon Lore ✦',    e:'🐉', img: skinURL('weapon_awp_am_awp_dragon_lore'),            r:'covert', p:320000},
@@ -1385,11 +1330,8 @@ const CASES = [
    w:{classified:35, covert:65}}
 ];
 
-/* ============================================================
-   STATE
-   ============================================================ */
 let state = { balance: 100000, inv: [], lastShopTask: 0, totalOpened: 0, totalBattles: 0, xp: 0, lastDaily: 0 };
-const SAVE_KEY = 'rbrd_v3';
+const SAVE_KEY = 'rbrd_v4';
 function save(){ try{ localStorage.setItem(SAVE_KEY, JSON.stringify(state)); }catch(e){} }
 function load(){
   try{
@@ -1455,9 +1397,6 @@ function fxConfetti(n){
   }
 }
 
-/* ============================================================
-   HERO BANNER
-   ============================================================ */
 let heroIdx = 0, heroTimer = null;
 const heroSlides = document.querySelectorAll('.hero-slide');
 const heroDots = document.querySelectorAll('#heroDots span');
@@ -1473,9 +1412,6 @@ function startHero(){
 heroDots.forEach((d,i)=>{ d.onclick = ()=>{ showHero(i); startHero(); }; });
 startHero();
 
-/* ============================================================
-   TABS
-   ============================================================ */
 document.querySelectorAll('.nav-tab').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
@@ -1489,9 +1425,6 @@ document.querySelectorAll('.nav-tab').forEach(btn=>{
   });
 });
 
-/* ============================================================
-   ONLINE + FEED
-   ============================================================ */
 let onlineCount = 1247;
 function tickOnline(){
   onlineCount += Math.floor(Math.random()*25)-12;
@@ -1533,9 +1466,6 @@ function fakeDrop(){
 }
 setTimeout(fakeDrop, 900);
 
-/* ============================================================
-   CASES RENDER
-   ============================================================ */
 function renderCases(){
   const g = document.getElementById('casesGrid');
   g.innerHTML = CASES.map(c=>`
@@ -1738,9 +1668,6 @@ function finishMulti(wins){
   reelBusy = false;
 }
 
-/* ============================================================
-   INVENTORY
-   ============================================================ */
 function renderInv(){
   const body = document.getElementById('invBody');
   if(!state.inv.length){
@@ -1804,9 +1731,6 @@ function sellAll(){
   toast('Продано всё: +'+fmt(t)+' ₽','ok');
 }
 
-/* ============================================================
-   SHOP
-   ============================================================ */
 let shopCur = null;
 function randomTask(){
   const t = Math.floor(Math.random()*4);
@@ -1860,9 +1784,6 @@ function checkShop(){
   }
 }
 
-/* ============================================================
-   PROFILE
-   ============================================================ */
 function getRank(xp){
   const r = [
     {min:0,name:'Новичок',color:'#8a90aa',e:'🌱'},
@@ -1952,9 +1873,6 @@ function claimDaily(){
   renderProfile();
 }
 
-/* ============================================================
-   GAMES — COMMON
-   ============================================================ */
 let gameKind = null, gameTimer = null;
 function openGame(kind){
   gameKind = kind;
@@ -2001,7 +1919,6 @@ function getBet(id){
   return v;
 }
 
-/* cells */
 let cellsPlaying = false;
 function renderCells(){
   document.getElementById('gameTitle').textContent = '🎯 Угадай ячейку';
@@ -2046,7 +1963,6 @@ function playCells(p){
   gameTimer = setTimeout(renderCells, 2000);
 }
 
-/* crash */
 let crashRAF = null, crashRunning = false;
 function renderCrash(){
   document.getElementById('gameTitle').textContent = '🚀 Краш';
@@ -2126,7 +2042,6 @@ function crashAction(){
   crashRAF = requestAnimationFrame(frame);
 }
 
-/* mines */
 let minesActive = false, minesOpened = 0, minesBet = 0, minesField = [];
 let minesCount = 5;
 const MT = 24;
@@ -2239,7 +2154,6 @@ function minesCashout(auto){
   btn.onclick=()=>renderMines();
 }
 
-/* roulette */
 const ROU = [
   {v:1.6,w:10,c:'#3b82f6'},{v:0,w:3,c:'#2a3255'},{v:2,w:8,c:'#10b981'},
   {v:0,w:3,c:'#2a3255'},{v:1.6,w:10,c:'#3b82f6'},{v:0,w:3,c:'#2a3255'},
@@ -2309,7 +2223,6 @@ function spinRou(){
   }, 4100);
 }
 
-/* dice */
 let diceChoice = 'low7';
 function renderDice(){
   document.getElementById('gameTitle').textContent = '🎲 Кости';
@@ -2385,7 +2298,6 @@ function finishDice(bet){
   }
 }
 
-/* slots */
 const SS = ['🍒','🍋','🍇','💎','⭐','7️⃣'];
 function renderSlots(){
   document.getElementById('gameTitle').textContent = '🎰 Слоты';
@@ -2461,15 +2373,10 @@ function finishSlots(bet){
   }
 }
 
-/* ============================================================
-   FORGE (UPGRADE) — ПОЛНОСТЬЮ НОВЫЙ
-   ============================================================ */
 let forgeItem = null, forgeBusy = false, forgeChance = 50;
-
 function calcMult(chance){
   return Math.round((100/chance)*0.95*100)/100;
 }
-
 function renderForge(preselectUid){
   document.getElementById('gameTitle').textContent = '⚒ Кузница скинов';
   forgeItem = null; forgeBusy = false; forgeChance = 50;
@@ -2571,28 +2478,22 @@ function renderForge(preselectUid){
     }, 60);
   }
 }
-
 function updateForgeUI(){
   const ch = forgeChance;
   const m = calcMult(ch);
   const arcR = 115;
   const circ = 2 * Math.PI * arcR;
 
-  // Update slider display
   document.getElementById('chanceVal').textContent = ch+'%';
   document.getElementById('multVal').textContent = '×'+m.toFixed(2);
 
-  // Update arc - green arc represents WIN zone
   const winArcLen = circ * (ch/100);
   const arcWin = document.getElementById('arcWin');
-  if(arcWin){
-    arcWin.style.strokeDashoffset = circ - winArcLen;
-  }
+  if(arcWin) arcWin.style.strokeDashoffset = circ - winArcLen;
 
-  // Update target marker position (at the end of the win arc)
   const marker = document.getElementById('targetMarker');
   if(marker){
-    const angle = (ch/100) * 360 - 90; // start from top
+    const angle = (ch/100) * 360 - 90;
     const rad = angle * Math.PI / 180;
     const cx = 130 + arcR * Math.cos(rad);
     const cy = 130 + arcR * Math.sin(rad);
@@ -2601,7 +2502,6 @@ function updateForgeUI(){
     marker.style.display = 'block';
   }
 
-  // Update badge
   const badge = document.getElementById('chanceBadge');
   badge.style.display = 'block';
   badge.textContent = '🎯 Шанс: '+ch+'% · ×'+m.toFixed(2);
@@ -2623,7 +2523,6 @@ function updateForgeUI(){
     document.getElementById('forgeBtn').textContent = '⚡ Улучшить';
   }
 }
-
 function findUpgradeItem(tp){
   const sorted = ITEMS.slice().sort((a,b)=>a.p-b.p);
   const above = sorted.filter(i=>i.p>=tp);
@@ -2636,7 +2535,6 @@ function findUpgradeItem(tp){
   }
   return {uid:uid(), n:base.n+' ✦', e:base.e, img:base.img, r:base.r, p:tp};
 }
-
 function runForge(){
   if(forgeBusy||!forgeItem) return;
   const item = forgeItem;
@@ -2659,7 +2557,6 @@ function runForge(){
 
   const win = Math.random()*100 < forgeChance;
 
-  // Shake animation
   let shakes = 0;
   const shakeInt = setInterval(()=>{
     shakes++;
@@ -2670,7 +2567,6 @@ function runForge(){
     }
   }, 100);
 }
-
 function finishForge(win, item, target, m){
   forgeBusy = false;
   const area = document.getElementById('forgeArea');
@@ -2713,7 +2609,6 @@ function finishForge(win, item, target, m){
     if(gameKind==='upgrade') renderForge();
   }, 1800);
 }
-
 function openUpgradeWithItem(uid){
   openGame('upgrade');
   setTimeout(()=>{
@@ -2722,9 +2617,6 @@ function openUpgradeWithItem(uid){
   }, 120);
 }
 
-/* ============================================================
-   BATTLES
-   ============================================================ */
 const BOTS = [
   {name:'xX_ProGamer_Xx',av:'🦊'},{name:'NoobMaster',av:'🐸'},
   {name:'DarkLord2010',av:'🐺'},{name:'SuperKotik',av:'🐱'},
@@ -2926,9 +2818,6 @@ function finishBattle(player, bots, mode){
   box.appendChild(again);
 }
 
-/* ============================================================
-   WITHDRAW
-   ============================================================ */
 let wdMethod = 'sber';
 const WDN = {sber:'Сбербанк',vtb:'ВТБ',tinkoff:'Тинькофф',yoomoney:'ЮMoney',qiwi:'QIWI',crypto:'Crypto'};
 document.querySelectorAll('#wdGrid .wd-card').forEach(b=>{
@@ -2960,9 +2849,6 @@ function doWithdraw(){
   closeWithdraw();
 }
 
-/* ============================================================
-   ADMIN
-   ============================================================ */
 function openAdmin(){
   document.getElementById('adminCur').textContent = fmt(state.balance);
   document.getElementById('adminModal').classList.add('show');
@@ -2994,9 +2880,6 @@ function adminReset(){
   toast('Сброшено','ok');
 }
 
-/* ============================================================
-   START
-   ============================================================ */
 load();
 updateBalance();
 renderCases();
@@ -3005,4 +2888,4 @@ document.getElementById('totalOpened').textContent = state.totalOpened||0;
 document.getElementById('totalBattles').textContent = state.totalBattles||0;
 </script>
 </body>
-  </html>
+</html>
