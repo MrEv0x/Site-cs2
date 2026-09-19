@@ -1254,47 +1254,50 @@ body::before{
 </div>
 
 <script>
-/* ============ CS:GO SKINS — через jsDelivr CDN ============ */
-function skinURL(path){
-  return 'https://images.weserv.nl/?url=raw.githubusercontent.com/ByMykel/counter-strike-image-tracker/main/static/panorama/images/econ/default_generated/' + path + '_light_large.png';
-  }
+/* ============ CS:GO SKINS — встроенные визуалы ============ */
 const ITEMS = [
-  {n:'P250 | Sand Dune',       e:'🔫', img: skinURL('weapon_p250_cu_p250_sand_dune'),            r:'consumer',   p:20},
-  {n:'MP9 | Storm',            e:'🔫', img: skinURL('weapon_mp9_cu_mp9_storm'),                   r:'consumer',   p:30},
-  {n:'SG 553 | Waves',         e:'🔫', img: skinURL('weapon_sg556_hy_sg556_waves'),               r:'consumer',   p:40},
-  {n:'MAG-7 | Storm',          e:'🔫', img: skinURL('weapon_mag7_hy_mag7_swirl'),                 r:'consumer',   p:50},
-  {n:'Galil AR | Cerberus',    e:'🔫', img: skinURL('weapon_galilar_cu_galil_cerberus'),          r:'consumer',   p:60},
-  {n:'PP-Bizon | Osiris',      e:'🔫', img: skinURL('weapon_bizon_cu_bizon_osiris'),              r:'consumer',   p:80},
-  {n:'AK-47 | Redline',        e:'🔥', img: skinURL('weapon_ak47_cu_ak47_redline'),               r:'industrial', p:120},
-  {n:'M4A1-S | Guardian',      e:'🛡️', img: skinURL('weapon_m4a1_silencer_am_m4a1s_guardian'),     r:'industrial', p:160},
-  {n:'AWP | Worm God',         e:'🐛', img: skinURL('weapon_awp_am_awp_worm_god'),                r:'industrial', p:200},
-  {n:'USP-S | Torque',         e:'🔫', img: skinURL('weapon_usp_silencer_cu_usp_torque'),         r:'industrial', p:250},
-  {n:'Glock-18 | Water Elemental', e:'💧', img: skinURL('weapon_glock_cu_glock_water'),           r:'industrial', p:300},
-  {n:'Desert Eagle | Conspiracy', e:'🎭', img: skinURL('weapon_deagle_am_deagle_conspiracy'),     r:'industrial', p:400},
-  {n:'AK-47 | Bloodsport',     e:'🩸', img: skinURL('weapon_ak47_cu_ak47_bloodsport'),            r:'milspec',    p:600},
-  {n:'M4A4 | Desolate Space',  e:'🌌', img: skinURL('weapon_m4a1_cu_m4a1_desolate_space'),        r:'milspec',    p:800},
-  {n:'AWP | Neo-Noir',         e:'🖤', img: skinURL('weapon_awp_cu_awp_neo_noir'),                r:'milspec',    p:1100},
-  {n:'USP-S | Kill Confirmed', e:'💀', img: skinURL('weapon_usp_silencer_cu_usp_kill_confirmed'), r:'milspec',    p:1400},
-  {n:'Desert Eagle | Printstream', e:'🖨️', img: skinURL('weapon_deagle_cu_deagle_printstream'),  r:'milspec',    p:1800},
-  {n:'M4A1-S | Printstream',   e:'🖨️', img: skinURL('weapon_m4a1_silencer_cu_m4a1s_printstream'), r:'milspec',    p:2400},
-  {n:'AK-47 | Vulcan',         e:'🌋', img: skinURL('weapon_ak47_cu_ak47_rubber'),                r:'restricted', p:4000},
-  {n:'AWP | Hyper Beast',      e:'👹', img: skinURL('weapon_awp_cu_awp_hyper_beast'),             r:'restricted', p:5500},
-  {n:'M4A1-S | Hyper Beast',   e:'👹', img: skinURL('weapon_m4a1_silencer_cu_m4a1s_hyper_beast'), r:'restricted', p:7000},
-  {n:'AWP | Asiimov',          e:'⚪', img: skinURL('weapon_awp_cu_awp_asimov'),                  r:'restricted', p:9000},
-  {n:'AK-47 | Asiimov',        e:'⚪', img: skinURL('weapon_ak47_cu_ak47_asiimov'),               r:'restricted', p:11000},
-  {n:'Desert Eagle | Blaze',   e:'🔥', img: skinURL('weapon_deagle_cu_deagle_blaze'),             r:'restricted', p:14000},
-  {n:'AK-47 | Fire Serpent',   e:'🐍', img: skinURL('weapon_ak47_cu_ak47_fire_serpent'),          r:'classified', p:22000},
-  {n:'M4A4 | Howl',            e:'🐺', img: skinURL('weapon_m4a1_cu_m4a1_howl'),                  r:'classified', p:28000},
-  {n:'Karambit | Fade',        e:'🔪', img: skinURL('weapon_knife_karambit_cu_karambit_fade'),    r:'classified', p:35000},
-  {n:'Butterfly | Fade',       e:'🦋', img: skinURL('weapon_knife_butterfly_cu_butterfly_fade'),  r:'classified', p:45000},
-  {n:'AWP | Dragon Lore',      e:'🐲', img: skinURL('weapon_awp_am_awp_dragon_lore'),            r:'classified', p:60000},
-  {n:'Bayonet | Doppler',      e:'💠', img: skinURL('weapon_knife_bayonet_cu_bayonet_doppler'),   r:'classified', p:80000},
-  {n:'M9 Bayonet | Crimson Web', e:'🕷️', img: skinURL('weapon_knife_m9_bayonet_cu_m9_bayonet_crimson_web'), r:'covert', p:150000},
-  {n:'Karambit | Doppler Ruby', e:'💎', img: skinURL('weapon_knife_karambit_cu_karambit_doppler_phase2'), r:'covert', p:220000},
-  {n:'AWP | Dragon Lore ✦',    e:'🐉', img: skinURL('weapon_awp_am_awp_dragon_lore'),            r:'covert', p:320000},
-  {n:'Karambit | Case Hardened', e:'💙', img: skinURL('weapon_knife_karambit_cu_karambit_case_hardened'), r:'covert', p:500000},
-  {n:'Bayonet | Night',        e:'🌑', img: skinURL('weapon_knife_bayonet_cu_bayonet_night'),     r:'covert', p:750000},
-  {n:'M4A4 | Howl StatTrak',   e:'🔥', img: skinURL('weapon_m4a1_cu_m4a1_howl'),                  r:'covert', p:1200000}
+  // Consumer
+  {n:'P250 | Sand Dune',       e:'🔫', wpn:'pistol', r:'consumer',   p:20},
+  {n:'MP9 | Storm',            e:'🔫', wpn:'smg',    r:'consumer',   p:30},
+  {n:'SG 553 | Waves',         e:'🔫', wpn:'rifle',  r:'consumer',   p:40},
+  {n:'MAG-7 | Storm',          e:'🔫', wpn:'shotgun',r:'consumer',   p:50},
+  {n:'Galil AR | Cerberus',    e:'🔫', wpn:'rifle',  r:'consumer',   p:60},
+  {n:'PP-Bizon | Osiris',      e:'🔫', wpn:'smg',    r:'consumer',   p:80},
+  // Industrial
+  {n:'AK-47 | Redline',        e:'🔥', wpn:'rifle',  r:'industrial', p:120},
+  {n:'M4A1-S | Guardian',      e:'🛡️', wpn:'rifle',  r:'industrial', p:160},
+  {n:'AWP | Worm God',         e:'🎯', wpn:'sniper', r:'industrial', p:200},
+  {n:'USP-S | Torque',         e:'🔫', wpn:'pistol', r:'industrial', p:250},
+  {n:'Glock-18 | Water',       e:'💧', wpn:'pistol', r:'industrial', p:300},
+  {n:'Desert Eagle | Conspiracy', e:'🦅', wpn:'pistol', r:'industrial', p:400},
+  // Mil-Spec
+  {n:'AK-47 | Bloodsport',     e:'🩸', wpn:'rifle',  r:'milspec',    p:600},
+  {n:'M4A4 | Desolate Space',  e:'🌌', wpn:'rifle',  r:'milspec',    p:800},
+  {n:'AWP | Neo-Noir',         e:'🖤', wpn:'sniper', r:'milspec',    p:1100},
+  {n:'USP-S | Kill Confirmed', e:'💀', wpn:'pistol', r:'milspec',    p:1400},
+  {n:'Deagle | Printstream',   e:'🖨️', wpn:'pistol', r:'milspec',    p:1800},
+  {n:'M4A1-S | Printstream',   e:'🖨️', wpn:'rifle',  r:'milspec',    p:2400},
+  // Restricted
+  {n:'AK-47 | Vulcan',         e:'🌋', wpn:'rifle',  r:'restricted', p:4000},
+  {n:'AWP | Hyper Beast',      e:'👹', wpn:'sniper', r:'restricted', p:5500},
+  {n:'M4A1-S | Hyper Beast',   e:'👹', wpn:'rifle',  r:'restricted', p:7000},
+  {n:'AWP | Asiimov',          e:'⚪', wpn:'sniper', r:'restricted', p:9000},
+  {n:'AK-47 | Asiimov',        e:'⚪', wpn:'rifle',  r:'restricted', p:11000},
+  {n:'Deagle | Blaze',         e:'🔥', wpn:'pistol', r:'restricted', p:14000},
+  // Classified
+  {n:'AK-47 | Fire Serpent',   e:'🐍', wpn:'rifle',  r:'classified', p:22000},
+  {n:'M4A4 | Howl',            e:'🐺', wpn:'rifle',  r:'classified', p:28000},
+  {n:'Karambit | Fade',        e:'🔪', wpn:'knife',  r:'classified', p:35000},
+  {n:'Butterfly | Fade',       e:'🦋', wpn:'knife',  r:'classified', p:45000},
+  {n:'AWP | Dragon Lore',      e:'🐲', wpn:'sniper', r:'classified', p:60000},
+  {n:'Bayonet | Doppler',      e:'💠', wpn:'knife',  r:'classified', p:80000},
+  // Covert
+  {n:'M9 | Crimson Web',       e:'🕷️', wpn:'knife',  r:'covert',     p:150000},
+  {n:'Karambit | Doppler Ruby',e:'💎', wpn:'knife',  r:'covert',     p:220000},
+  {n:'AWP | Dragon Lore ✦',    e:'🐉', wpn:'sniper', r:'covert',     p:320000},
+  {n:'Karambit | Case Hardened',e:'💙', wpn:'knife', r:'covert',     p:500000},
+  {n:'Bayonet | Night',        e:'🌑', wpn:'knife',  r:'covert',     p:750000},
+  {n:'M4A4 | Howl StatTrak',   e:'🔥', wpn:'rifle',  r:'covert',     p:1200000}
 ];
 
 const RARITY = {
