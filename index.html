@@ -1254,29 +1254,11 @@ body::before{
 </div>
 
 <script>
-/* ============ CS:GO SKINS — локальные данные ============ */
-let itemsData = [];
+/* ============ CS:GO SKINS — из skins.js ============ */
+const ITEMS = (window.SKINS_DATA || []).map(it => ({ ...it }));
 
-async function loadSkins() {
-  try {
-    const response = await fetch('skins/skins.json');
-    if (!response.ok) throw new Error('Не удалось загрузить skins.json');
-    const data = await response.json();
-    
-    // Преобразуем объект в массив, который ожидает сайт
-    itemsData = Object.keys(data).map(name => ({
-      uid: name.toLowerCase().replace(/[^a-z0-9]+/g, '_'), // простой uid
-      n: name,
-      e: '🔫', // запасной эмодзи, если картинка не загрузится
-      img: data[name].image,
-      r: data[name].rarity,
-      p: 0 // Цена будет установлена позже
-    }));
-    console.log('Скины успешно загружены:', itemsData.length);
-  } catch (error) {
-    console.error('Ошибка загрузки скинов:', error);
-    alert('Не удалось загрузить скины. Проверь консоль.');
-  }
+if (!ITEMS.length) {
+  console.error('skins.js не подключён или пуст — картинки не загрузятся');
 }
 
 // Запускаем загрузку при старте
