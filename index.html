@@ -1253,20 +1253,22 @@ body::before{
   </div>
 </div>
 
+<script src="skins.js"></script>
+
 <script>
-/* ============ CS:GO SKINS — из skins.js ============ */
-const ITEMS = (window.SKINS_DATA || []).map(it => ({ ...it }));
-
-if (!ITEMS.length) {
-  console.error('skins.js не подключён или пуст — картинки не загрузятся');
-}
-
+/* ============ CS:GO SKINS — через jsDelivr CDN ============ */
 // Запускаем загрузку при старте
 loadSkins();
 
 // Остальной код (rollItem, renderInv и т.д.) можно оставить, 
 // но нужно будет заменить ITEMS на itemsData в нужных местах.
 // Например, в функции rollItem: const pool = itemsData.filter(...)
+  /* ============ CS:GO SKINS — из skins.js ============ */
+const ITEMS = (window.SKINS_DATA || []).map(it => ({ ...it }));
+
+if (!ITEMS.length) {
+  console.error('skins.js не подключён или пуст — картинки не загрузятся');
+}
 
 const RARITY = {
   consumer:   {name:'Армейский',     color:'#b0c3d9'},
