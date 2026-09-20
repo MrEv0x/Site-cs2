@@ -1,2 +1,3 @@
 # Site-cs2
-Hz
+Beta-tesring my site for cs2 case. 
+competed 75%
